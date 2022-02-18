@@ -1,0 +1,69 @@
+/*******공통/전체*************/
+*{margin:0 ; padding: 0;}
+ul{list-style: none;}
+.inner{width: 1170px; margin:0 auto; border:1px solid black;}
+h3{color: #790000; font-weight:initial; font-size:1em; font-style:italic;}
+h2{margin-top:5px; margin-bottom:20px;}
+
+
+/*******헤더*************/
+header{width:100%; height: 100px; padding-top: 30px; box-sizing: border-box;}
+header .inner::after, header .inner::before{clear: both; content: ""; display: block;}
+.logo{float:left; border:1px solid red;}
+nav{float: right; border: 1px solid red;}
+
+nav ul::before, nav ul::after{clear: both; content: ""; display: block;}
+nav > ul > li{float: left; cursor:pointer; margin:10px; width:115px; background-color: yellow; text-align: center; padding: 5px 0;}
+
+nav > ul{background-color: red;}
+nav > ul > li > ul{background-color: skyblue; font-size:0.8em; height:0; overflow: hidden; transition:2s;}/*변화가 있을것에 transition을 준다. hover에 transition을 주면 마우스를 올렸을 때만 적용되어 마우스를뗏을때는 transition이 적용되있지 않기에 움직임이 없어 뚝 끊겨 자연스럽지 못함.*/
+nav > ul > li:hover > ul{height: 100px;} /*상위메뉴 각각인 li에 hover하면 해당 메뉴의 하위메뉴만 나옴*/
+nav > ul > li > ul > li{ padding:5px 0; margin: 5px 0; color:#fff;}
+nav > ul > li > ul > li:hover{color:yellow;}
+
+/*nav > ul:hover > li > ul{height: 100px;}*//*상위메뉴ul에 hover하면 전체의 하위메뉴가 모두 나옴*/
+/*******메인배너*************/
+.main_img{ border: 10px solid green; margin: 0 auto; background-image: url(../img/v03.jpg); background-repeat: no-repeat; background-position:center; background-size: cover; height: 820px;  }
+.main_img > .main_text{width:500px; height: 400px; background-color: rgb(195, 47, 47,0.8);
+position:relative; top:150px; left:55%;}/*반응형용으로 윈도우창따라다님*/
+
+.main_img .inner{position: relative;}/*border값을 준inner가 relaive값을 주어서 높이 값을 주지 않은 inner상태의  자신을 기준으로 삼아서 안에 내용을 감싸지 않는 모습으로 상단에 붙어있음.*/
+.main_img .inner > .main_text{position: absolute; top:150px; right:50px; width:500px; height: 400px; background-color: rgb(195, 47, 47,0.8); }
+/*고정용으로 제자리에 있음*/
+
+
+.main_text {color:#fff;}
+.main_text button{background-color: initial; border: 1px solid #fff; color:#fff; padding:10px; }
+/*******컨텐츠*************/
+/**box1**/
+.box1{ border:1px solid orange;}
+.box1::after, .box1::before{clear: both; display: block; content:"";}
+.box1_left{float:left; width:50%; height: 572px; background-image:url(../img/con_1.jpg); background-repeat:no-repeat; background-size: cover;}
+.box1_right{float:right; width:50%;  background-image:url(../img/con_2.jpg); background-repeat: no-repeat; background-size: cover; height:572px; padding-left:40px; padding-top:100px; box-sizing: border-box;}
+.box1_right h5{font-size: 1.2em; color:#666;}
+.box1_right p{font-size: 0.8em; line-height: 1.8em; margin-top:10px; width:400px;}
+.box1_right button{margin-top:50px; padding: 10px 25px; background-color:#790000; color:#fff; border: none;}
+
+
+/**box2**/
+.box2{height:725px; text-align: center; padding-top: 80px; box-sizing: border-box;}
+.box2_group::after, .box2_group::before{clear:both; display:block; content: "";}
+.box2_group div{float:left; width:370px;}
+.box2_group div:nth-child(2){margin:0 30px;}
+
+
+/**box3**/
+.box3{height:725px; text-align: center; padding-top: 80px; box-sizing: border-box; background-color:#f9f9f9;}
+.box3_group::after, .box3_group::before{clear:both; display:block; content: "";}
+.box3_group div{float:left; width:370px; margin-top:10px; }
+.box3_group div:nth-child(2){margin-left: 30px; margin-right: 30px;}
+.box3_group div p{margin-top: 20px;}
+
+/*******푸터*************/
+
+footer{background-color:#333337; height: 211px; color:#99999b;}
+.line{height:30px; border-bottom:1px solid #48484b; margin-bottom: 10px ;}
+.f_logo{float:left; width:30%; background:url(../img/flogo.gif) no-repeat; height:100px; background-position:left center;  }
+.f_text{float:right; width:70%;}
+footer .inner::after, footer .inner::before{content: ""; display: block; clear:both;}
+.f_text p:nth-child(2){margin-top:10px; color:#484848;}
